@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS transfers;
+
+CREATE TABLE user (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	username TEXT UNIQUE NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+	password TEXT NOT NULL
+);
+
+CREATE TABLE transfers (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	sender_id INTEGER NOT NULL,
+	account_no DECIMAL(26) NOT NULL,
+	amount DECIMAL(7,2) NOT NULL,
+	title TEXT NOT NULL,
+	FOREIGN KEY (sender_id) REFERENCES user (id)
+);
+
+INSERT INTO user VALUES (1, 'test', 'test@test.com', 'test');

@@ -1,0 +1,29 @@
+python3 -m venv venv
+instaluje wirtualne środowisko
+
+. venv/bin/activate
+aktywuje środowisko
+
+
+export FLASK_APP=bankt
+export FLASK_ENV=development
+flask run
+
+
+TODO
+walidacja email
+przypominanie reset hasła
+input walidation obejrzeć owasp
+przechowywanie haseł
+
+
+
+
+diagram aktywności logowanie/rejestracja
+logowanie / rejestracja zwykły użytkownik
+logowanie / rejestracja zwykły użytkownik
+
+logowanie / rejestracja (dane firmy) biznes
+pola przy zakładaniu firmy
+
+

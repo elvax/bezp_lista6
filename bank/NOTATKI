@@ -1,0 +1,1 @@
+Salts serve two purposes: 1) prevent the protected form from revealing two identical credentials and 2) augment entropy fed to protecting function without relying on credential complexity. The second aims to make pre-computed lookup attacks [*2] on an individual credential and time-based attacks on a population intractable.

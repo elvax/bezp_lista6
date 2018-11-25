@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Witaj {{user['username']}}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<div>
+		<a class="action" href="{{ url_for('logged.transfer')}}">Wykonaj przelew</a>
+		<br>
+		<a class="action" href="{{ url_for('logged.history')}}">Historia</a>
+{% endblock %}

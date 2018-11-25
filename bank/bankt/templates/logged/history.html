@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Transfer history{% endblock %}</h1>
+
+{% endblock %}
+
+{% block content %}
+  {% for transfer in transfers %}
+    <article class="post">
+      <header>
+        <div>
+          <p>Title: {{ transfer['title'] }}</p>
+          <p>Account number: {{ transfer['account_no'] }}</p>
+          <p>Amount: {{ transfer['amount'] }}</p>
+        </div>
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
